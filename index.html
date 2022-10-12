@@ -23,17 +23,18 @@
 
     <div class="wrapper">
         <!-- Sidebar  -->
-        <nav id="sidebar" class="sticky-top">
+        <nav id="sidebar"><!--class="position-fixed" -->
             <div class="sidebar-header">
-                <h3 href="">TransHyDe-Sys Roadmap</h3>
-                <strong>THY-SYS-RM</strong>
+                <img src="THY-logo.png" id="THY-logo" style="width:40px; display:none" alt="THY-Logo"></img>
+                <h3 class="sidebar-text" style="display: block;">TransHyDe-Sys Roadmap</h3>
+                <!-- <strong>THY-SYS-RM</strong> -->
             </div>
 
             <ul class="list-unstyled components">
                 <li>
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-home"></i>
-                        H₂-Anwendung
+                        <i class="fas fa-industry"></i>
+                        <span class="sidebar-text">H₂-Anwendung</span>
                     </a>
                     <ul class="collapse show list-unstyled" id="homeSubmenu">
                         <li>
@@ -52,8 +53,9 @@
                 </li>
                 <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-copy"></i>
-                        H₂-Bereitstellung                    </a>
+                        <i class="fas fa-globe"></i>
+                        <span class="sidebar-text">H₂-Bereitstellung</span>
+                    </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
                             <a href="#" class="showbtn" name="central">Erzeugung zentral</a>
@@ -71,8 +73,9 @@
                 </li>
                 <li>
                     <a href="#pageSubmenu3" data-toggle="collapse" aria-expaned="false" class="dropdown-toggle">
-                        <i class="fas fa-copy"></i>
-                        H₂-Infrastruktur                    </a>
+                        <i class="fas fa-tint"></i>
+                        <span class="sidebar-text">H₂-Infrastruktur</span>
+                    </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu3">
                         <li>
                             <a href="#" class="showbtn" name="gas">Gasförmig</a>
@@ -91,7 +94,8 @@
                 <li>
                     <a href="#pageSubmenu4" data-toggle="collapse" aria-expaned="false" class="dropdown-toggle">
                         <i class="fas fa-copy"></i>
-                        Rahmenbedingungen                    </a>
+                        <span class="sidebar-text">Rahmenbedingungen</span>
+                    </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu4">
                         <li>
                             <a href="#">Gesellschaft (S)</a>
@@ -116,13 +120,7 @@
                 <li>
                     <a href="#handlungsbedarfe">
                         <i class="fas fa-image"></i>
-                        Handlungsbedarfe
-                    </a>
-                </li>
-                <li>
-                    <a href="#rahmenbedingungen">
-                        <i class="fas fa-question"></i>
-                        Rahmenbedingungen
+                        <span class="sidebar-text">Handlungsbedarfe</span>
                     </a>
                 </li>
             </ul>
@@ -143,9 +141,9 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <button type="button" id="sidebarCollapse" class="btn">
                         <i class="fas fa-align-left"></i>
-                        <span>Seitenleiste</span>
+                        <span>toggle sidebar</span>
                     </button>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
@@ -155,24 +153,34 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Szenario A</a>
-                            </li>
+                                <button type="button" id="btn-szenario-a" class="btn btn-szenario" name="szenario-a" style="background-color: #DBE181;">
+                                    <!-- <i class="fas fa-align-left"></i> -->
+                                    <span>Szenario A</span>
+                                </button>
+                                <!-- <a class="nav-link" href="#" style="background-color: #40bfbf;">Szenario A</a> -->
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Szenario B</a>
+                             <button type="button" id="btn-szenario-b" class="btn btn-szenario" name="szenario-b" style="background-color: #919724;">
+                                Szenario B
+                            </button>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Szenario C</a>
-                            </li>
+                                <button type="button" id="btn-szenario-c" class="btn btn-szenario" name="szenario-c" style="background-color: #606518;">
+                                   <!-- <i class="fas fa-align-left"></i> -->
+                                   <span>Szenario C</span>
+                               </button>
+                               </li>
                         </ul>
                     </div>
                 </div>
             </nav>
 
             <div class="row align-items-start">
+                <h3 id="h3-szenario">Szenario X</h3>
+                <br><br>
                 <div class="col border">
                   <h2>kurzfristig</h2>
-                  <img src="DE_2030.jpg" class="col-md-6 mb-3 ms-md-3" alt="...">
+                  <img src="DE_2030.jpg" class="col-md-6 mb-3 ms-md-3 img-szenario" alt="...">
                   <br>
                   <span class="badge bg-primary badge-anwendung industry" style="display:none;">Industrie</span>
                   <span class="badge bg-secondary badge-anwendung verkehr" style="display:none;">Verkehr</span>
@@ -191,7 +199,7 @@
                 </div>
                 <div class="col border">
                   <h2>mittelfristig</h2>
-                  <img src="DE_2030.jpg" class="col-md-6 mb-3 ms-md-3" alt="...">
+                  <img src="DE_2030.jpg" class="col-md-6 mb-3 ms-md-3 img-szenario" alt="...">
                   <br>
                   <span class="badge bg-primary badge-anwendung industry" style="display:none;">Industrie</span>
                   <span class="badge bg-secondary badge-anwendung verkehr" style="display:none;">Verkehr</span>
@@ -210,7 +218,7 @@
                 </div>
                 <div class="col border">
                  <h2>langfristig</h2> 
-                 <img src="DE_2030.jpg" class="col-md-6 mb-3 ms-md-3" alt="...">
+                 <img src="DE_2030.jpg" class="col-md-6 mb-3 ms-md-3 img-szenario" alt="...">
                  <br>
                  <span class="badge bg-primary badge-anwendung industry" style="display:none;">Industrie</span>
                  <span class="badge bg-secondary badge-anwendung verkehr" style="display:none;">Verkehr</span>
@@ -239,6 +247,24 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
     </div>
+    </div>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">© 2022, Dinh Du Tran, DECHEMA e. V.</p>
+        
+            <a href="http://www.wasserstoff-leitprojekte.de" target="_blank" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img src="BMBF-LP-TransHyDE_Logo_RGB-Farbe.png" style="height:100px;" alt="WLP-Logo">
+                <img src="BMBF_gefoerdert_2017_de.jpg" style="height:100px;" alt="WLP-Logo">
+            </a>
+        
+            <ul class="nav col-md-4 justify-content-end">
+              <!-- <li class="nav-item"><a href="http://www.transhyde.de" target="_blank" class="nav-link px-2 text-muted">TransHyDe</a></li> -->
+              <li class="nav-item"><a href="http://www.wasserstoff-leitprojekte.de" target="_blank" class="nav-link px-2 text-muted">WLP</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
+            </ul>
+          </footer>
+      </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -249,7 +275,7 @@
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="sidebars.js"></script>
+    <!-- <script src="sidebars.js"></script> -->
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -263,11 +289,21 @@
             var link_name = $(this).attr('name');
             // console.log(link_name);
             $('.'+link_name).toggle();
-            // gas
-            // liquid
-            // ammonia
-            // lohc
         });
+
+        $(".btn-szenario").click(function () {
+            var szenario_name = $(this).attr('name');
+            var szenario_title=$(this).html();
+            // console.log(szenario_title);
+            // $('.'+link_name).toggle();
+            $('.img-szenario').attr('src',szenario_name+'.jpg');
+            $('#h3-szenario').html(szenario_title);
+        });
+        $('#sidebarCollapse').click(function() {
+            $('.sidebar-text').toggle();
+            $('.list-unstyled').removeClass('show');
+            $('#THY-logo').toggle();
+        })
     </script>
 </body>
 
